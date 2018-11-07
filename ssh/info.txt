@@ -1,0 +1,45 @@
+ssh {user}@{host}
+
+on a server we may have to do "sudo apt-get install git" to install git
+may have to do "sudo apt-get install nodejs"
+
+How SSH works:
+
+- Symmetrical Encryption
+-- Uses one secret key for encryption/decryption
+-- Each key is unique for each session
+-- Key Exchange Algorithm (Diffie-Hellman Key Exchange)
+-- Problems:
+--- Anyone who has the key can decrypt
+
+- Asymmetrical Encryption
+-- required for Key Exchange Algorithm
+-- use of private and public keys
+-- Resources:
+--- https://www.youtube.com/watch?v=NmM9HA2MQGI
+--- https://www.youtube.com/watch?v=Yjrfm_oRO0w
+--- https://www.youtube.com/watch?v=vsXMMT2CqqE&t=
+--- https://www.youtube.com/watch?v=NF1pwjL9-DE
+
+- Hashing
+-- Using a hash function
+-- Host decrypts using symmetric key, packet sequence #, and content
+-- Host then reruns hash function on content and compares the two hashes
+
+
+1. Diffie-Helmman Key Exchange
+2. Arrive at Symmetric Key
+3. Make sure of no funny business
+4. Authenticate user
+
+Folder:
+~/.ssh
+
+Generate public/private key pairs:
+ssh-keygen -C "email@email.com"
+
+shh-add ~/.ssh/your_id_rsa
+
+public keys will have .pub, private keys will not
+
+copy key into authorized_keys on your server
