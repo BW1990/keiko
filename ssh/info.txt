@@ -37,6 +37,8 @@ Folder:
 
 Generate public/private key pairs:
 ssh-keygen -C "email@email.com"
+ssh-keygen -t rsa -b 4096 -C "email@email.com"
+pbcopy < ~/.ssh/id_rsa.pub
 
 shh-add ~/.ssh/your_id_rsa
 
