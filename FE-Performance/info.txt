@@ -42,3 +42,25 @@ Network performance
 --- JS in the header prevents DOM from downloading quicker
 ---- Put at bottom to give impression of improved performance
 ---- exceptions: analytics
+-- CSS is render-blocking. Must be combined with DOM to create the Render Tree
+--- want this loaded ASAP
+--- Load only what is needed (one stylesheet)
+--- Above the fold loading
+---- const loadStyleSheet = src => {
+    if (document.createStylesheet) {
+        document.createStylesheet(src)
+    } else {
+        const stylesheet = document.createElement('link');
+        stylesheet.href = src;
+        stylesheet.type = 'text/css';
+        document.getElementsByTagName('head')[0].appendChild(stylesheet)
+    }
+
+    window.onload = function() {
+        loadStyleSheet("./style3.css");
+    }
+}
+--- Media attributes
+---- <link href="/styles.css" type="text/css" media="only screen and (min-width: 500px)">
+---- media="all" by default
+--- Less specificty
