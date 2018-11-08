@@ -1,0 +1,44 @@
+Network performance
+- Shrink files
+-- JS, CSS, HTML
+-- images
+--- File format best for job
+---- SVG
+----- Vector graphics
+----- Expand and it will maintain sharpness and clear
+----- Retina/4K displays
+----- Usually simplistic things
+---- JPG
+----- Photos, images, lots of colours, bigger in file size
+----- doesn't allow for transparency
+---- PNG
+----- Limit number of colours and are smaller in size
+----- Logos usually
+----- Can add transparency
+---- GIF
+----- grainy, oddly coloured, 2 - 256 colours
+----- good for small animations
+
+- Compression techniques for images:
+-- Reduce PNG with TinyPNG
+-- Reduce JPG with JPEG-optimizer
+-- use simple illustrations instead of highly detailed photographs
+-- Lower JPEG image quality (30-60%)
+-- Resize image based on size it will be displayed
+-- Display different sized images for different backgrounds
+--- media queries in CSS
+-- Use CDNS like imgix
+-- Remove image metadata
+--- verexif.com/en/index.php
+
+- Delivery optimizations:
+-- Limit amount of resources
+--- https://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser
+-- Critical Render Path
+--- User requests page, HTML starts streaming to browser
+--- if browser encounters a tag that links to another file, it will start downloading that file
+--- then it creates DOM -> CSSOM -> Render Tree -> Layout -> Paint
+--- After CSSOM is loaded, all DOM Content is loaded
+--- JS in the header prevents DOM from downloading quicker
+---- Put at bottom to give impression of improved performance
+---- exceptions: analytics
