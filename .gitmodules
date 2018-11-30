@@ -1,0 +1,6 @@
+[submodule "FE-Performance/FE-Performance/keiko-corp"]
+	path = FE-Performance/FE-Performance/keiko-corp
+	url = https://github.com/BW1990/keiko-corp
+[submodule "keiko-corp"]
+	path = keiko-corp
+	url = https://github.com/BW1990/keiko-corp

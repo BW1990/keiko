@@ -64,3 +64,15 @@ Network performance
 ---- <link href="/styles.css" type="text/css" media="only screen and (min-width: 500px)">
 ---- media="all" by default
 --- Less specificty
+
+- after CSSOM is completed, JS is loaded
+-- JS is parser-blocking
+--- can use async property for scripts
+---- downloads JS with another thread
+---- executes before page finishes loading
+---- add to external scripts that don't affect the DOM
+--- can use defer property for scripts
+---- will not block loading
+---- executes after HTML is parsed
+---- acts on render DOM/tree but not important to above-the-fold Content
+--- if core functionality requires js - use async; critical scripts should load normally; otherwise use defer;
