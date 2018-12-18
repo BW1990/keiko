@@ -1,0 +1,8 @@
+Unit tests
+- For pure functions
+
+Integration tests
+- How components interact
+
+Automation tests
+- Hardest to set up
