@@ -38,3 +38,31 @@ var sing = function () {
 var error = function () {
     throw Error('oops');
 };
+var fightRobotArmy = function (robots) {
+    console.log('FIGHT!');
+};
+;
+var dog = {};
+dog.count;
+// Function
+var fightArmyRobot2 = function (robots) {
+    console.log('Fight!');
+};
+var fightArmyRobot3 = function (robots) {
+    return 5;
+};
+// Class
+var Animal = /** @class */ (function () {
+    function Animal(sound) {
+        this.sing = 'allalalalal';
+        this.sing = sound;
+    }
+    Animal.prototype.greet = function () {
+        return "Hello, " + this.sing;
+    };
+    return Animal;
+}());
+var lion = new Animal('RAAAAWWWWR');
+// Union
+var confused = 'Hello';
+confused = 23;
