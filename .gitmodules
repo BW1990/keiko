@@ -4,3 +4,6 @@
 [submodule "keiko-corp"]
 	path = keiko-corp
 	url = https://github.com/BW1990/keiko-corp
+[submodule "Typescript/robofriends-typescript-completed"]
+	path = Typescript/robofriends-typescript-completed
+	url = git@github.com:aneagoie/robofriends-typescript-completed.git
