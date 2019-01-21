@@ -1,0 +1,12 @@
+Logging tools:
+- Morgan (npm install morgan)
+-- Can use as middleware in express
+--- app.use(morgan('tiny'));
+- Can get rid of OPTIONS in node by installing npm install cors and adding as middleware
+- Winston
+-- Similar to console logging
+
+HTTPS Everywhere
+- SSL/TLS Certificates
+-- https://letsencrypt.org/
+-- Cloudflare
