@@ -10,3 +10,41 @@ HTTPS Everywhere
 - SSL/TLS Certificates
 -- https://letsencrypt.org/
 -- Cloudflare
+
+Use environment variables for anything that needs to stay private
+
+Secure headers
+- npm install helmet
+-- app.use(helmet());
+--- automatically sets secure headers
+
+Access control
+- give people only access to what they need access to
+- principle of least privilege
+- const whitelist = ['https://example.com/', 'https://example2.com/'];
+- app.use(cors({
+    origin: function(origin, callback) {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+}));
+
+Data management
+- Hashing passwords + Storage
+-- bcrypt, scrypt, Aragon2
+--- bcrypt
+---- bcrypt = require('bcrypt-nodejs');
+---- bcrypt.hash("password", null, null, function(err, hash) {
+    // store hash in your password DB.
+});
+---- bcrypt.compare("password", hash, function(res) {
+    // response
+});
+- Encrypting database
+-- pgcrypto (postgresql)
+
+Authentication
+- token based or cookie based
