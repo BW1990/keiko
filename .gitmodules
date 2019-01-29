@@ -7,3 +7,9 @@
 [submodule "Typescript/robofriends-typescript-completed"]
 	path = Typescript/robofriends-typescript-completed
 	url = git@github.com:aneagoie/robofriends-typescript-completed.git
+[submodule "smart-brain-api"]
+	path = smart-brain-api
+	url = git@github.com:BW1990/smart-brain-api.git
+[submodule "smart-brain"]
+	path = smart-brain
+	url = git@github.com:BW1990/smart-brain.git
